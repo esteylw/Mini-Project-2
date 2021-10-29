@@ -21,6 +21,10 @@ class Pillowcase {
 
       number = 0;
     }
+    //Get the max size of the bag
+    int getMaxSize(){
+      return maxSize;
+    }
 
     //The method gets the candy
     void getCandy(){
@@ -86,6 +90,15 @@ class Pillowcase {
     //return the number of candy inside the pillowcase
     int getNumber(){
       return number;
+    }
+    //Return the percent of the bag that is filled
+    double getPercentage(){
+      //Typecast to double to avoid 0.0 return runtime error
+      double dbNumber = number;
+      double dbMaxSize = maxSize;
+      double percentOfBag = dbNumber/dbMaxSize;
+      percentOfBag = percentOfBag * 100;
+      return percentOfBag;
     }
 
     //Add up the number of candies we have
